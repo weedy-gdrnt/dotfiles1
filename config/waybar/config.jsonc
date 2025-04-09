@@ -1,0 +1,113 @@
+// btw! this .jsonc file based on mubin6th's on github waybar 
+// https://github.com/mubin6th/MinimalSwayFX/tree/main/waybar
+
+{
+    "layer": "top",
+    "spacing": 0,
+    "height": 0,
+
+    "margin-top": 0,
+    "margin-right": 8,
+    "margin-bottom": 0,
+    "margin-left": 8,
+
+    "modules-right": [
+		"hyprland/language", "custom/sep",
+        "hyprland/workspaces", "custom/sep",
+		"custom/pmenu"
+    ],
+    "modules-center": [
+        "clock", "custom/sep",
+		"mpris"
+    ],
+
+    "modules-left": [
+        "tray", //"custom/sep",
+        "cpu", "custom/sep",
+        "memory", "custom/sep",
+        "network", "custom/sep",
+        "pulseaudio"
+    ],
+	
+	"custom/sep": {
+		"format": "|",
+		"tooltip": false
+	},
+
+    "wayland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "tooltip": false
+    },
+
+    "tray": {
+        "spacing": 10,
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p - %a, %d %b %Y}",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "format": "cpu {usage}%",
+        "interval": 2,
+
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "format": "mem {percentage}%",
+        "interval": 2,
+
+        "states": {
+            "critical": 80
+        }
+    },
+
+    "network": {
+        "format-wifi" : "wifi {bandwidthDownBits}",
+        "format-ethernet": "enth {bandwidthDownBits}",
+        "format-disconnected" : "no network",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 2,
+        "max-volume": 150,
+        "format": "vol {volume}%",
+        "format-bluetooth": "vol {volume}%  ",
+        "nospacing": 0,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+     "hyprland/language": {
+	"format": "{}",
+	"format-uk": "UA",
+	"format-ru": "RU",
+	"format-en": "US"
+
+    },
+    "mpris": {
+  	"format": "{artist} - {title}",
+  	"format-paused": "▶ {artist} - {title}",
+  	"format-playing": "⏸ {artist} - {title}",
+  	"format-stopped": "⏹",
+ //	"player": "spotify", // можно убрать для авто
+  	"on-click": "playerctl play-pause",
+  	"on-scroll-up": "playerctl next",
+  	"on-scroll-down": "playerctl previous",
+	"tooltip" : false
+    },
+	"custom/pmenu": {
+  		"format": "⏻",
+  		"tooltip": "Power Menu",
+  		"on-click": "~/.config/rofi/power_menu.sh",
+  		"interval": 0
+	}
+
+}

@@ -1,0 +1,95 @@
+/* COLORS */
+/*
+   foreground #1f1c27 31, 28, 39
+   background #b6a0ff 182, 160, 255
+
+*/
+
+* {
+	border: none;
+	border-radius: 10px;
+	font-family: FiraCode Nerd Font SemBd;
+}
+
+window#waybar {
+	background-color: rgba(0, 0, 0, 0);
+	margin-top: 4px;
+}
+
+window#waybar > * {
+	padding-top: 6px;
+}
+.modules-left,
+.modules-center, 
+.modules-right {
+	background-color: /* #1f1c27 */ rgba(31, 28, 39, 0.8);
+	color: #b6a0ff;
+}
+
+#custom-sep {
+	color: rgb(70, 70, 70);
+}
+
+#tray,
+#cpu_text,
+#cpu,
+#memory,
+#battery,
+#network,
+#pulseaudio,
+#clock,
+#mpris,
+#language,
+#workspaces,
+#custom-pmenu {
+	margin: 3px 6px;
+	transition: .5s ease;
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+
+#custom-pmenu,
+#pulseaudio,
+#mpris, /*{
+	padding-right: 6px;
+}*/
+
+#language,
+#clock,
+#cpu {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+#pulseaudio:hover,
+#mpris:hover,
+#custom-pmenu:hover {
+	color: #ffffff;
+	transition: .2s ease;
+}
+
+#workspaces button > * {
+	margin: 0px 10px; 
+	padding-left: 6px;
+	padding-right: 6px;
+} 
+
+#workspaces button {
+	padding: 0px 10px;
+	color: #b6a0ff;
+	transition: all .2s ease;
+/*	margin: 0 10px; */
+}
+
+#workspaces button.active {
+	margin: 0 20px;
+	padding: 0px 20px;
+	color: #1f1c27;
+	background-color: #b6a0ff;
+	transition: all .2s ease;
+}
+
+#workspaces button.active:hover {
+	background-color: #a5a0aa;
+	color: #b6a0ff;
+}

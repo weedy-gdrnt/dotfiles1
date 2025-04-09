@@ -1,0 +1,124 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "position": "right",
+    "source": "~/.config/fastfetch/logo",
+    "color": {
+      "1": "magenta",
+      "2": "blue"
+    },
+    "type": "file"
+  },
+  "display": {
+        "separator": "",
+        "color": {
+            "separator": "blue"
+        }
+  },
+  "modules": [
+    {
+        "type" : "custom",
+   	"format" : "╭──────────────╌╌╴╴ ╴",
+	"outputColor": "blue"
+    },
+    {
+      "type": "title",
+      //"key" : "│      ",
+      "format": "{#blue}│            {#magenta}{#1}{#3}{user-name}!{host-name}",
+      //"keyColor": "yellow",
+      //"outputColor": "red",
+    },
+    {
+      "type": "custom",
+      "format": "│"
+    },
+    {
+        "type": "host",
+	    "key" : "│  motherbrd ~ ",
+	    "keyColor": "blue",
+	    "outputColor": "magenta"
+    },
+    {
+        "type": "uptime",
+	    "key" : "│  uptime ~ ",
+	    "keyColor": "blue",
+	    "outputColor": "magenta"
+    },
+    {
+        "type": "packages",
+	    "key" : "│  pkgs ~ ",
+	    "keyColor": "blue",
+	    "outputColor": "magenta"
+    },
+    {
+      "type": "display",
+    "key" : "│  monitor ~ ",
+    "keyColor": "blue",
+    "outputColor": "magenta"
+    },
+    {
+      "type": "cpu",
+      "key" : "│  cpu ~ ",
+      "keyColor": "blue",
+      "outputColor": "magenta"
+    },
+    {
+      "type": "gpu",
+      "key" : "│  gpu ~ ",
+      "keyColor": "blue",
+      "outputColor": "magenta"
+    },
+    {
+      "type": "memory",
+      "key" : "│  ram ~ ",
+      "format": "[{percentage}] {used} ~ {total}",
+      "keyColor": "blue",
+      "outputColor": "magenta"
+    },
+    {
+      "type": "swap",
+      "key" : "│  swap ~ ",
+      "format": "[{percentage}] {used} ~ {total}",
+      "keyColor": "blue",
+      "outputColor": "magenta"
+    },
+    {
+      "type": "disk",
+      "key" : "│  disk [{mountpoint}] ~ ",
+      "format": "[{#green}{size-percentage}{#magenta}] {size-used} ~ {size-total}",
+      "keyColor": "blue",
+      "outputColor": "magenta"
+    },
+    {
+      "type": "localip",
+      "key" : "│  ipv4 ~ ",
+      "keyColor": "blue",
+      "outputColor": "magenta"
+    },
+    {
+      "type": "locale",
+      "key" : "│  locale ~ ",
+      "keyColor": "blue",
+      "outputColor": "magenta"
+    },
+    {
+      "type": "custom",
+      "format": "│"
+    },
+    {
+      "type": "custom",
+      "format": "│  {#1}~  {#30}#{#90}# {#31}#{#91}# {#32}#{#92}# {#33}#{#93}# {#34}#{#94}# {#35}#{#95}# {#36}#{#96}# {#37}#{#97}#{#blue}  ~  "
+    },
+    {
+      "type": "datetime",
+      "key": " ",
+      "format": "{#blue}│  {#1}{#blue}~     {day-pretty}.{month-pretty}.{year-short} {#magenta}{hour-pretty}:{minute-pretty}:{second-pretty}{#blue}     ~"
+    },
+    {
+      "type": "custom",
+      "format": "╰─────────────────────────────────────────────────╌╌╴╴ ╴"
+    },
+    
+    "break"
+  ]
+}
